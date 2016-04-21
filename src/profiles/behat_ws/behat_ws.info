@@ -1,0 +1,5 @@
+name = Behat Workshop
+description = Behat Workshop profile
+core = 7.x
+dependencies[] = bws
+dependencies[] = admin_menu

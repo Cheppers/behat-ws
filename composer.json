@@ -1,0 +1,6 @@
+{
+  "require": {
+    "drush/drush": "7.0.0",
+    "drupal/drupal-extension": "~3.0"
+  }
+}
