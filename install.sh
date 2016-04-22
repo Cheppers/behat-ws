@@ -8,8 +8,10 @@ Make sure the database exists or the user has database creation privileges.'
   exit 1
 fi
 
-chmod -R 777 docroot
-rm -rf docroot
+if [ -d docroot ]; then
+  chmod -R 777 docroot
+  rm -rf docroot
+fi
 vendor/bin/drush make -y src/profiles/behat_ws/project-core.make.yml docroot
 vendor/bin/drush make -y src/profiles/behat_ws/project.make.yml --no-core --contrib-destination=docroot/sites/all/
 ln -fs $(pwd)/src/profiles/behat_ws ./docroot/profiles/behat_ws
